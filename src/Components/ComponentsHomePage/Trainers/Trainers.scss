@@ -1,0 +1,197 @@
+:root {
+    --color-primary: #F98149;
+    --color-secondary: #FF8B36;
+    --color-dark-blue: #003F7D;
+    --color-gray: #8A948C;
+    --color-accent: #FF914C;
+    --color-black: #000;
+    --color-navy: #0E2C40;
+    --color-light: #FFF;
+    --color-blue: #0148A9;
+    --color-green: #46B734;
+    --color-light-gray: #F2F4F8;
+}
+
+.trainers {
+    padding: 4rem 0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            right: -120px;
+            bottom: 10px;
+            border: 55px dashed var(--color-secondary);
+            background-color: transparent;
+            animation: spin 15s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 2rem;
+
+        h2 {
+            margin: 0;
+        }
+
+        .blue-text {
+            color: var(--color-blue);
+        }
+
+        .orange-text {
+            color: var(--color-secondary);
+        }
+    }
+
+    .swiper {
+        overflow: visible !important;
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            overflow: visible !important;
+        }
+    }
+
+    .trainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: var(--color-light);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        padding: 1.5rem;
+        width: 550px;
+        gap: 1rem;
+        height: 380px;
+        overflow: visible !important;
+
+        .best {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 10px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            z-index: 10000;
+            overflow: visible;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            p {
+                margin: 0;
+                font-weight: 600;
+                font-size: 0.9rem;
+            }
+        }
+
+        .top {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+
+            .img {
+                flex-shrink: 0;
+
+                img {
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 15px;
+                }
+            }
+
+            .info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                h3 {
+                    margin: 0;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+
+                .job {
+                    font-size: 1rem;
+                    color: var(--color-secondary);
+                }
+
+                .rating {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .stars {
+                        display: flex;
+                        color: gold;
+                        font-size: 1.2rem;
+                    }
+
+                    .reviews {
+                        font-size: 0.9rem;
+                        color: #777;
+                    }
+                }
+
+                .meta {
+                    display: flex;
+                    gap: 1.5rem;
+                    margin-top: 0.5rem;
+                    list-style: none;
+                    padding: 0;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        font-size: 0.95rem;
+                        color: #555;
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .desc {
+            font-size: 0.95rem;
+            color: #333;
+            margin-top: 1rem;
+        }
+
+
+    }
+}

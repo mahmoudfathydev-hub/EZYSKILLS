@@ -1,0 +1,135 @@
+:root {
+    --color-primary: #F98149;
+    --color-secondary: #FF8B36;
+    --color-dark-blue: #003F7D;
+    --color-gray: #8A948C;
+    --color-accent: #FF914C;
+    --color-black: #000;
+    --color-navy: #0E2C40;
+    --color-light: #FFF;
+    --color-blue: #0148A9;
+    --color-green: #46B734;
+    --color-light-gray: #F2F4F8;
+}
+
+
+.ads-section {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+
+    .container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+
+        .bg-circle1,
+        .bg-circle2 {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+
+        .bg-circle1 {
+            width: 300px;
+            height: 300px;
+            background: #ff914c;
+            top: 10%;
+            left: 5%;
+            animation: float1 18s ease-in-out infinite alternate;
+        }
+
+        .bg-circle2 {
+            width: 400px;
+            height: 400px;
+            background: #0148a9;
+            bottom: 10%;
+            right: 5%;
+            animation: float2 22s ease-in-out infinite alternate;
+        }
+
+        @keyframes float1 {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(80px, 60px);
+            }
+
+            100% {
+                transform: translate(-40px, 120px);
+            }
+        }
+
+        @keyframes float2 {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-100px, -80px);
+            }
+
+            100% {
+                transform: translate(60px, -120px);
+            }
+        }
+
+        .text-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            .text {
+                font-size: 2.5rem;
+            }
+
+            .blue-text {
+                color: var(--color-blue);
+            }
+
+            .orange-text {
+                color: var(--color-secondary);
+            }
+
+
+        }
+
+        .swiper {
+            width: 550px;
+
+            img {
+                width: 450px;
+            }
+        }
+    }
+
+    .image-content {
+        width: 200px;
+        position: relative;
+        height: 100px;
+        padding: 1rem 0;
+
+        img {
+            width: 100%;
+            height: 80%;
+            position: absolute;
+            right: -1320px;
+            padding-bottom: 0.5rem;
+            animation: floatImage 3s ease-in-out infinite alternate;
+        }
+    }
+
+    @keyframes floatImage {
+        from {
+            transform: translateY(-20px);
+        }
+
+        to {
+            transform: translateY(30px);
+        }
+    }
+}

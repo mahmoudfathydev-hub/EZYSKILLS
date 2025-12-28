@@ -1,0 +1,97 @@
+:root {
+    --color-primary: #F98149;
+    --color-secondary: #FF8B36;
+    --color-dark-blue: #003F7D;
+    --color-gray: #8A948C;
+    --color-accent: #FF914C;
+    --color-black: #000;
+    --color-navy: #0E2C40;
+    --color-light: #FFF;
+    --color-blue: #0148A9;
+    --color-green: #46B734;
+    --color-light-gray: #F2F4F8;
+}
+
+.popoular-curses {
+    margin-bottom: 14rem;
+    padding-top: 2rem;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        .heading {
+            p {
+                color: var(--color-blue);
+                font-size: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                span {
+                    color: var(--color-secondary);
+                }
+            }
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            row-gap: 11rem; 
+            column-gap: 2rem;
+            padding-top: 2rem;
+        }
+
+        .card {
+            position: relative;
+            background: var(--color-dark-blue); 
+            border-radius: 20px;
+            height: 320px;
+            overflow: visible;
+        }
+
+        .card-img {
+            width: 120px;
+            height: auto;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .card-content {
+            position: absolute;
+            bottom: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            background: #fff;
+            border-radius: 18px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-content h5 {
+            color: var(--color-dark-blue);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.8rem;
+        }
+
+
+        .btn-img {
+            width: 70%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}

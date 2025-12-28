@@ -1,0 +1,124 @@
+:root {
+    --color-primary: #F98149;
+    --color-secondary: #FF8B36;
+    --color-dark-blue: #003F7D;
+    --color-gray: #8A948C;
+    --color-accent: #FF914C;
+    --color-black: #000;
+    --color-navy: #0E2C40;
+    --color-light: #FFF;
+    --color-blue: #0148A9;
+    --color-green: #46B734;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+
+
+    .container {
+        padding: 0.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .hexagon {
+                width: 60px;
+                height: 60px;
+                position: relative;
+                background-color: var(--color-blue);
+                clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+
+                .cap {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 2rem;
+                    color: var(--color-secondary);
+                    z-index: 10;
+                }
+            }
+
+            .text-logo {
+                h3 {
+                    font-size: 2rem;
+                    color: var(--color-blue);
+                    font-family: "Lora", serif;
+                }
+
+                h6 {
+                    font-size: 1.2rem;
+                    color: var(--color-primary);
+                    font-family: "Cinzel", serif;
+                }
+
+                p {
+                    font-size: 0.4rem;
+                    color: var(--color-black);
+                }
+            }
+        }
+
+        .links {
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+
+                li {
+                    a {
+                        color: var(--color-gray);
+                        transition: all 0.3s linear;
+                    }
+
+                    .active {
+                        color: var(--color-secondary);
+                        font-weight: 600;
+                    }
+
+                    a:hover {
+                        color: var(--color-blue);
+                    }
+                }
+            }
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .Create-Account {
+                background-color: var(--color-secondary);
+                color: var(--color-light);
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: transparent;
+                    color: var(--color-secondary);
+                }
+            }
+
+            .login {
+                color: var(--color-secondary);
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: var(--color-secondary);
+                    color: var(--color-light);
+                }
+            }
+        }
+    }
+}

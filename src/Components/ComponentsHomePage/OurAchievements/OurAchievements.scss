@@ -1,0 +1,160 @@
+:root {
+    --color-primary: #F98149;
+    --color-secondary: #FF8B36;
+    --color-dark-blue: #003F7D;
+    --color-gray: #8A948C;
+    --color-accent: #FF914C;
+    --color-black: #000;
+    --color-navy: #0E2C40;
+    --color-light: #FFF;
+    --color-blue: #0148A9;
+    --color-green: #46B734;
+    --color-light-gray: #F2F4F8;
+}
+
+
+.achievments {
+    background-color: var(--color-light-gray);
+    z-index: -10;
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 10px;
+
+            p {
+                font-size: 2rem;
+                color: var(--color-blue);
+
+
+                span {
+                    color: var(--color-secondary);
+                }
+            }
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .img {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .numbers {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                width: 100%;
+                position: relative;
+
+                .top {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    width: 100%;
+                    gap: 1rem;
+                    padding: 20px;
+                    z-index: 10;
+                    padding-top: 1rem;
+
+                    .num1,
+                    .num2 {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-direction: column;
+                        background-color: var(--color-light);
+                        padding: 20px;
+                        border-radius: 10px;
+                        box-shadow: 0 8px 25px #0000001f;
+                        img {
+                            width: 50px;
+                        }
+
+                        p {
+                            color: var(--color-primary);
+                            font-size: 2.3rem;
+                            font-weight: bold;
+                        }
+
+                        .icon-text {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            gap: 45px;
+
+                            h4 {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+
+                .bottom {
+                    background-color: var(--color-light);
+                    width: 93%;
+                    border-radius: 10px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 75px;
+                    z-index: 10;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+                    p {
+                        font-size: 4.5rem;
+                        color: var(--color-blue);
+                        font-weight: 900;
+                    }
+
+                    h3 {
+                        font-size: 1.5rem;
+                        text-align: center;
+                        color: var(--color-black);
+                    }
+                }
+
+                .img-dotted {
+                    position: absolute;
+                    bottom: 15px;
+                    right: -100px;
+                    z-index: 1;
+
+                    img {
+                        width: 250px;
+                        animation: floatImage 3s ease-in-out infinite alternate;
+                    }
+                }
+
+                @keyframes floatImage {
+                    from {
+                        transform: translatex(-20px);
+                    }
+
+                    to {
+                        transform: translatex(30px);
+                    }
+                }
+            }
+        }
+    }
+}

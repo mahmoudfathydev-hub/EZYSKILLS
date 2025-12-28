@@ -1,0 +1,23 @@
+:root {
+    --color-primary: #F98149;
+    --color-secondary: #FF8B36;
+    --color-dark-blue: #003F7D;
+    --color-gray: #8A948C;
+    --color-accent: #FF914C;
+    --color-black: #000;
+    --color-navy: #0E2C40;
+    --color-light: #F2F4F8;
+    --color-blue: #0148A9;
+    --color-green: #46B734;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid var(--color-accent);
+    border-radius: .5rem;
+    margin-right: 1.5rem;
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
