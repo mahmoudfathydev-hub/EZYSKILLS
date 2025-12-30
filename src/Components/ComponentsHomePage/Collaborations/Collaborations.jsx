@@ -2,8 +2,8 @@ import React from 'react'
 import './Collaborations.scss'
 import google from "../../../images/Vector.png"
 import apple from "../../../images/apple.png"
-import amazon from "../../../images/amazon.png"
-import bmw from "../../../images/bmw.png"
+import amazon from "../../../images/Amazon.png"
+import bmw from "../../../images/BMW.png"
 import dottod from "../../../images/Dotted.png"
 
 export default function Collaborations() {
