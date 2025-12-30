@@ -1,0 +1,156 @@
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 11rem;
+    column-gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+
+    // Apply animation when grid re-renders or class is toggled
+    &.animating .card {
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    position: relative;
+    background: var(--color-dark-blue);
+    border-radius: 20px;
+    height: 320px;
+    overflow: visible;
+    opacity: 0; // Start hidden for animation
+    animation: fadeInUp 0.5s ease-out forwards;
+
+    // Stagger animation for children if needed, or stick to simple
+    @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{$i * 0.1}s;
+        }
+    }
+}
+
+.card-img {
+    width: 120px;
+    height: auto;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.card-content {
+    position: absolute;
+    bottom: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    background: #fff;
+    border-radius: 18px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-content h5 {
+    color: var(--color-dark-blue);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+// Pagination Styles
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 1rem;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 50%;
+        background: #f0f2f5;
+        color: var(--color-dark-blue, #333);
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+        &:hover:not(:disabled) {
+            background: var(--color-dark-blue, #0056b3);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        &.active {
+            background: var(--color-orange, #ff6b00); // Assuming orange is a primary detail color or fallback
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: #e0e0e0;
+        }
+
+        // Styles for Prev/Next text buttons (wider)
+        &.nav-btn {
+            width: auto;
+            border-radius: 30px;
+            padding: 0 1.2rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 992px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}

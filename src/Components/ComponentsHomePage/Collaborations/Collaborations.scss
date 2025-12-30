@@ -1,0 +1,70 @@
+:root {
+    --color-primary: #F98149;
+    --color-secondary: #FF8B36;
+    --color-dark-blue: #003F7D;
+    --color-gray: #8A948C;
+    --color-accent: #FF914C;
+    --color-black: #000;
+    --color-navy: #0E2C40;
+    --color-light: #FFF;
+    --color-blue: #0148A9;
+    --color-green: #46B734;
+    --color-light-gray: #F2F4F8;
+}
+
+.collabrations {
+    padding: 2.5rem 0;
+    position: relative;
+
+    .dotted {
+        width: 180px;
+        position: absolute;
+        top: 80px;
+        animation: floatImage 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatImage {
+        from {
+            transform: translateY(-20px);
+        }
+
+        to {
+            transform: translateY(30px);
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .heading {
+            p {
+                color: var(--color-blue);
+                font-size: 2rem;
+
+                span {
+                    color: var(--color-secondary);
+                }
+            }
+        }
+
+        .logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 150px;
+                margin: 3rem;
+                cursor: pointer;
+                transition: all ease-in-out 0.3s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

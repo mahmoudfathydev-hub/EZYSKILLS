@@ -1,0 +1,35 @@
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--color-primary, #F98149); // Use global var with fallback
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-size: 1.5rem;
+    opacity: 0.9;
+
+    &:hover {
+        transform: translateY(-5px);
+        background-color: var(--color-secondary, #FF8B36); // Use global var with fallback
+        opacity: 1;
+        box-shadow: 0 6px 15px rgba(249, 129, 73, 0.4);
+    }
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 45px;
+        height: 45px;
+    }
+}

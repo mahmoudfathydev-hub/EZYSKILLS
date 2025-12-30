@@ -1,0 +1,131 @@
+:root {
+    --color-primary: #F98149;
+    --color-secondary: #FF8B36;
+    --color-dark-blue: #003F7D;
+    --color-gray: #8A948C;
+    --color-accent: #FF914C;
+    --color-black: #000;
+    --color-navy: #0E2C40;
+    --color-light: #FFF;
+    --color-blue: #0148A9;
+    --color-green: #46B734;
+    --color-light-gray: #F2F4F8;
+}
+
+.certifications {
+    padding-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    padding-top: 2rem;
+
+    .bg-circle1 {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background: rgba(255, 139, 54, 0.15);
+        top: -80px;
+        left: -80px;
+        animation: float1 10s ease-in-out infinite;
+    }
+
+    .bg-circle2 {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: rgba(0, 63, 125, 0.15);
+        bottom: 60px;
+        right: -60px;
+        animation: float2 12s ease-in-out infinite;
+    }
+
+    .bg-circle3 {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: rgba(249, 129, 73, 0.15);
+        top: 40%;
+        left: 10%;
+        animation: float3 8s ease-in-out infinite;
+    }
+
+
+    @keyframes float1 {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(45px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes float2 {
+        0% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(-60px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes float3 {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        50% {
+            transform: translate(30px, -30px);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-size: 2rem;
+                color: var(--color-blue);
+                padding-right: 10px;
+
+                span {
+                    font-size: 2rem;
+                    color: var(--color-secondary);
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            padding: 3.5rem 0;
+
+            img {
+                width: 200px;
+            }
+        }
+    }
+}

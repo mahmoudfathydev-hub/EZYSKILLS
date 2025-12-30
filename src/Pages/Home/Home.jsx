@@ -6,6 +6,8 @@ import HowItWorking from '../../Components/ComponentsHomePage/HowItWorking/HowIt
 import PopoularCourses from '../../Components/ComponentsHomePage/PopoularCourses/PopoularCourses'
 import OurAchievements from '../../Components/ComponentsHomePage/OurAchievements/OurAchievements'
 import Trainers from '../../Components/ComponentsHomePage/Trainers/Trainers'
+import Certifications from '../../Components/ComponentsHomePage/Certifications/Certifications'
+import Collaborations from '../../Components/ComponentsHomePage/Collaborations/Collaborations'
 
 export default function Home() {
     return (
@@ -17,6 +19,8 @@ export default function Home() {
             <PopoularCourses />
             <OurAchievements />
             <Trainers />
+            <Certifications />
+            <Collaborations />
         </div>
     )
 }

@@ -29,7 +29,7 @@ export default function Footer() {
                         </div>
                         <div className="content">
                             <p>
-                                Let Us build your career together Be the first person to transform yourself with our unique & world class corporate level trainings.
+                                “This is a fictional project created for portfolio purposes only. No real affiliation with the mentioned companies.”
                             </p>
                         </div>
                         <div className="middle">

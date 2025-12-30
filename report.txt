@@ -1,0 +1,128 @@
+PROJECT REPORT - EZYSKILLS
+Date: December 30, 2025
+Generated for: Mahmoud Fathy
+
+================================================================================
+1. PROJECT OVERVIEW
+================================================================================
+The "EZYSKILLS" project is a modern, responsive e-learning platform designed to help users identify their career paths in IT (Web Development, Mobile Development, Cybersecurity, etc.) through an interactive chatbot and browse relevant courses. The application is built as a highly interactive Single Page Application (SPA).
+
+PROJECT SIZE:
+- Total Source Files: ~80 files (JSX Components, SCSS Stylesheets, Configuration)
+- Major Components: ~30+ React Components
+- Pages: 10+ distinct page routes
+- Styling: Custom SCSS architecture with global variables and modular component styles.
+
+================================================================================
+2. COMPLETED WORK & TIMEFRAMES
+================================================================================
+The project has undergone rapid development with significant progress made during the sprint from Dec 28, 2025, to Dec 30, 2025.
+
+[COMPLETED TASKS]
+1. Project Initialization & Architecture (Dec 27-28)
+   - Setup of React + Vite environment.
+   - Installation of core dependencies (Redux, Router, Sass).
+   - Creation of directory structure (Components, Pages, Images).
+
+2. Global UI & Home Page (Dec 28-29)
+   - Navbar: Responsive with hamburger menu for mobile view.
+   - Footer: Multi-column descriptive footer with social links.
+   - Home Section: Hero Section, Ads, Certifications, Collaborations, HowItWorking, Achievements, Trainers, WhoCanJoin.
+   - Aspirations: Multi-colored animated cards.
+   - Popular Courses: Dynamic slicing of course data with hover elevations.
+   - Routing: Global ScrollToTop and BackToTopButton integration.
+
+3. Interactive Chatbot Feature (Dec 29 - 30)
+   - Core Logic: Advanced state-managed decision tree (Job -> Path -> Tech Stack).
+   - Dynamic UI: Auto-scrolling, option cards, bot avatars, and fade-in animations.
+   - Responsiveness: Targeted CSS for mobile chat experience.
+
+4. Detailed Course Information System (Dec 30)
+   - Dynamic Routing: Individual pages at `/course-info/:id`.
+   - Head Section: 500px header with image overlays and "Basic to Advance" tagline.
+   - Middle Section (Content):
+     - Integrated "About" and "Objectives" (FaCheckCircle icons).
+     - Custom Accordion for "Course Content" with numbered steps.
+     - Animated Background: Plus, Dotted, and Arrow icons with floating CSS animations.
+     - Card UI: White background container with soft box-shadow and rounded edges.
+   - Bottom Section (Projects & CTA):
+     - Refactored Project Grid: Interactive "Click-to-Show" cards (hiding title/desc until clicked).
+     - Glassmorphism: Background blurred circles with infinite horizontal movement.
+     - Course CTA: "Wanna check more..." section with specialized buttons (Demo, Enroll, Download).
+
+5. Courses Catalog (Dec 29-30)
+   - Multi-category Grid: Color-coded categories (Python, Frontend, Backend, etc.).
+   - Card Interaction: Hover states and direct routing to course details.
+   - Data Architecture: Centralized `CoursesData.js` managing ID-based lookups and unique content.
+
+================================================================================
+3. REMAINING WORK
+================================================================================
+To reach full completion (v1.0 launch), the following tasks remain:
+
+1. Inner Page Content (High Priority)
+   - Complete content implementation for 'About Us', 'Contact Us', 'FAQ', and 'Pricing'.
+   - Currently, these pages have file structures but require detailed implementation.
+
+2. Course Logic & Filtering (Medium Priority)
+   - Connect the Chatbot's final recommendation to the Courses page to filter results dynamically.
+   - Further refine course data in `CoursesData.js` to populate all course objects with unique content.
+
+3. Backend Integration / Data Mocking (Medium Priority)
+   - Replace static arrays in implementations with a centralized data manager (Redux/Context) or API calls.
+   - Implement real form handling for Login/Sign Up.
+
+4. Final Polish & Testing (Low Priority)
+   - Comprehensive cross-browser testing.
+   - Performance optimization (Lazy loading images/routes).
+
+EXPECTED COMPLETION DATE: January 10, 2026
+(Assuming current development pace continues)
+
+================================================================================
+4. TECHNICAL STACK & LIBRARIES
+================================================================================
+[CORE]
+- React (v19.2.0): UI Library
+- Vite (v7.2.4): Build Tool & Bundler
+- React Router DOM (v7.11.0): Routing
+
+[STATE & UTILITIES]
+- @reduxjs/toolkit & react-redux: Global State Management
+- Axios: HTTP Requests
+- Classnames: Conditional class joining
+- Dayjs: Date formatting
+
+[FORMS]
+- React Hook Form: Form state management
+- Yup: Schema validation
+
+[UI & ANIMATION]
+- Sass: CSS Pre-processing
+- Framer Motion: Complex animations
+- React Icons: Iconography
+- React Toastify: Notifications
+- Swiper: Carousels/Sliders
+
+================================================================================
+5. DESIGN & AESTHETICS
+================================================================================
+The website features a high-energy, professional aesthetic tailored for education and tech.
+
+[COLOR PALETTE]
+- Primary: Orange (#F98149, #FF8B36) - Used for call-to-actions, highlights, and gradients.
+- Secondary: Dark Blue/Navy (#003F7D, #0E2C40) - Used for backgrounds, text, and trust indicators.
+- Accents: Green (#46B734) and Light Gray (#F2F4F8).
+
+[TYPOGRAPHY]
+- Family: "Poppins", sans-serif.
+- Weights: 300 (Light) to 900 (Black), ensuring strong hierarchy.
+
+[ANIMATIONS]
+- Fade-ins: Used on chat messages for a smooth flow.
+- Hover Effects: Card elevations, button scaling, and color shifts.
+- Scroll Behavior: Smooth scrolling for navigation and chat stream.
+
+[STRUCTURE]
+- The design relies heavily on "Cards" (Course Cards, Option Cards) with rounded corners and subtle shadows to create depth.
+- The interface is fully responsive, adapting from desktop (1300px container) down to mobile viewports.
