@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import CoursesCard from '../../COMPONENTSGLOBAL/CoursesCard/CoursesCard';
-import './CursesSection.scss';
+import './CoursesSection.scss';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function CoursesSection({ courses }) {
-    
+
     const totalCourses = courses ? courses.length : 0;
     const coursesPerPage = 8;
     const totalPages = Math.ceil(totalCourses / coursesPerPage);
@@ -13,7 +13,7 @@ export default function CoursesSection({ courses }) {
 
     const [currentPage, setCurrentPage] = useState(1);
 
-    
+
     useEffect(() => {
         setCurrentPage(1);
     }, [courses]);
@@ -42,7 +42,7 @@ export default function CoursesSection({ courses }) {
     const renderPagination = () => {
         const pageNumbers = [];
 
-        
+
         if (totalPages <= 10) {
             for (let i = 1; i <= totalPages; i++) {
                 pageNumbers.push(
@@ -56,7 +56,7 @@ export default function CoursesSection({ courses }) {
                 );
             }
         } else {
-            
+
             const maxPagesToShow = 5;
             let startPage = Math.max(1, currentPage - 2);
             let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
@@ -65,7 +65,7 @@ export default function CoursesSection({ courses }) {
                 startPage = Math.max(1, endPage - maxPagesToShow + 1);
             }
 
-            
+
             pageNumbers.push(
                 <button
                     key="prev"
@@ -112,7 +112,7 @@ export default function CoursesSection({ courses }) {
                 );
             }
 
-            
+
             pageNumbers.push(
                 <button
                     key="next"
