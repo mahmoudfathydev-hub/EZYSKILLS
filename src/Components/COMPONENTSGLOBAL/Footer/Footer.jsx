@@ -2,15 +2,17 @@ import React from 'react'
 import { FaGraduationCap, FaChevronRight, FaPhoneAlt, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { RiMapPin2Fill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
+import { Link } from 'react-router-dom';
 import './Footer.scss'
+
 export default function Footer() {
     const quiclLinks = [
-        { id: 1, name: "Home" },
-        { id: 2, name: "Our Story" },
-        { id: 3, name: "Best Courses" },
-        { id: 4, name: "Your FAQ’s" },
-        { id: 5, name: "Cancellation & Refunds" },
-        { id: 6, name: "Contact US" }
+        { id: 1, name: "Home", path: "/" },
+        { id: 2, name: "Our Story", path: "/about-us" },
+        { id: 3, name: "Best Courses", path: "/courses" },
+        { id: 4, name: "Pricing", path: "/pricing" },
+        { id: 5, name: "Your FAQ’s", path: "/FAQ" },
+        { id: 6, name: "Contact US", path: "/contact" }
     ]
     return (
         <div className='footer'>
@@ -46,7 +48,9 @@ export default function Footer() {
                             {
                                 quiclLinks.map((item) => {
                                     return (
-                                        <li key={item.id}>{item.name}</li>
+                                        <li key={item.id}>
+                                            <Link to={item.path}>{item.name}</Link>
+                                        </li>
                                     )
                                 })
                             }
@@ -93,5 +97,3 @@ export default function Footer() {
         </div>
     )
 }
-
-

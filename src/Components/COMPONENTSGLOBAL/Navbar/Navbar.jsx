@@ -4,7 +4,7 @@ import Button from '../../UI/Button/Button'
 import { FaGraduationCap } from "react-icons/fa";
 import { Link, NavLink } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar({ isFAQ, isPricing }) {
     const links = [
         { id: 1, name: "Home", link: "/" },
         { id: 2, name: "Course Selector", link: "/course-selector" },
@@ -16,7 +16,7 @@ export default function Navbar() {
 
     const [active, setActive] = useState(links[0].link)
     return (
-        <div className='navbar'>
+        <div className={`navbar ${isFAQ ? 'navbar-faq' : ''} ${isPricing ? 'navbar-pricing' : ''}`}>
             <div className="container">
                 <div className="logo">
                     <div className="hexagon">
@@ -35,7 +35,9 @@ export default function Navbar() {
                                 <li key={link.id}>
                                     <NavLink
                                         to={link.link}
-                                        className={({ isActive }) => isActive ? 'active' : ''}
+                                        className={({ isActive }) =>
+                                            `link-item ${isActive ? 'active' : ''}`
+                                        }
                                     >
                                         {link.name}
                                     </NavLink>

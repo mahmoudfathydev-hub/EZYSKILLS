@@ -20,10 +20,7 @@ export default function SignIn() {
                         <input type="text" placeholder='Your Last Name' />
                         <input type="email" placeholder='Email Address' />
                         <input type="password" placeholder='Password' autoComplete="new-password" />
-                        {/* <div className="check-box">
-                            <input type="checkbox" />
-                            <span>Remember me</span>
-                        </div> */}
+                        {}
                         <div className="btn">
                             <Button name="Create Acount" className="create-account" />
                             <div className="content-btn">

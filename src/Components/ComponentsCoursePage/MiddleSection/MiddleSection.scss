@@ -98,7 +98,7 @@
 
                 .check-icon {
                     color: var(--color-green);
-                    background: white; // Ensure it looks good
+                    background: white; 
                     border-radius: 50%;
                     min-width: 20px;
                     margin-top: 3px;
@@ -168,7 +168,7 @@
                         padding-left: 1rem;
 
                         li {
-                            font-size: 0.9rem; // "make font here small"
+                            font-size: 0.9rem; 
                             color: var(--color-gray);
                             margin-bottom: 0.5rem;
                             line-height: 1.4;
@@ -178,7 +178,7 @@
 
                 &.active {
                     .accordion-header {
-                        // Optional active state style
+                        
                     }
                 }
             }

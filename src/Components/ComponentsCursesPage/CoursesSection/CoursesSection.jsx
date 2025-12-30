@@ -4,7 +4,7 @@ import './CursesSection.scss';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function CoursesSection({ courses }) {
-    // 1. Use passed courses data instead of generating local mock data
+    
     const totalCourses = courses ? courses.length : 0;
     const coursesPerPage = 8;
     const totalPages = Math.ceil(totalCourses / coursesPerPage);
@@ -13,7 +13,7 @@ export default function CoursesSection({ courses }) {
 
     const [currentPage, setCurrentPage] = useState(1);
 
-    // Reset to page 1 if courses data changes (e.g. filter applied)
+    
     useEffect(() => {
         setCurrentPage(1);
     }, [courses]);
@@ -42,7 +42,7 @@ export default function CoursesSection({ courses }) {
     const renderPagination = () => {
         const pageNumbers = [];
 
-        // Show ellipses logic only if totalPages > 10, otherwise show all
+        
         if (totalPages <= 10) {
             for (let i = 1; i <= totalPages; i++) {
                 pageNumbers.push(
@@ -56,7 +56,7 @@ export default function CoursesSection({ courses }) {
                 );
             }
         } else {
-            // Smart pagination with ellipses
+            
             const maxPagesToShow = 5;
             let startPage = Math.max(1, currentPage - 2);
             let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
@@ -65,7 +65,7 @@ export default function CoursesSection({ courses }) {
                 startPage = Math.max(1, endPage - maxPagesToShow + 1);
             }
 
-            // Previous Button
+            
             pageNumbers.push(
                 <button
                     key="prev"
@@ -112,7 +112,7 @@ export default function CoursesSection({ courses }) {
                 );
             }
 
-            // Next Button
+            
             pageNumbers.push(
                 <button
                     key="next"

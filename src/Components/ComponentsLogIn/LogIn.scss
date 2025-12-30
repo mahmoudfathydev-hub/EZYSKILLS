@@ -25,12 +25,12 @@
             width: 450px;
             height: 610px;
             color: var(--color-gray);
-            border-radius: 25px; // لو الخلفية داكنة
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); // شادو بارز وخفيف
+            border-radius: 25px; 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
             transition: box-shadow 0.3s ease;
 
             &:hover {
-                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); // شادو أقوى عند hover
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); 
             }
 
             .heading {

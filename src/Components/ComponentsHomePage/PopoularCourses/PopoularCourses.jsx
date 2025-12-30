@@ -1,9 +1,9 @@
-import { coursesData } from "../../../data/CoursesData"; // Import data
+import { coursesData } from "../../../data/CoursesData"; 
 import CoursesCard from "../../COMPONENTSGLOBAL/CoursesCard/CoursesCard";
 import "./PopoularCourses.scss";
 
 export default function PopoularCourses() {
-    // Take first 4 courses for "Popular" section as a demo
+    
     const popularCourses = coursesData.slice(0, 4);
 
     return (

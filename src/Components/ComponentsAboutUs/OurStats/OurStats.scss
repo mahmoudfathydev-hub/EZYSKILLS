@@ -1,0 +1,52 @@
+@import '../../../main.scss';
+
+.our-stats {
+    padding: 5rem 0;
+    background-color: var(--color-light);
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-10px);
+            }
+
+            .icon-wrapper {
+                font-size: 2.5rem;
+                color: var(--color-secondary);
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                font-size: 2.5rem;
+                color: var(--color-navy);
+                font-weight: 800;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                color: var(--color-gray);
+                font-weight: 600;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

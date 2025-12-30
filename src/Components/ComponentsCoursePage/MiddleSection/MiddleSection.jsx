@@ -44,7 +44,7 @@ export default function MiddleSection({ course }) {
                 <div className='right-column'>
                     <div className='course-content-accordion'>
                         <h3>Course Content</h3>
-                        {course.contnent?.map((item, index) => { // Note: using 'contnent' as per data source
+                        {course.contnent?.map((item, index) => { 
                             const isOpen = openIndex === index;
                             return (
                                 <div key={item.id} className={`accordion-item ${isOpen ? 'active' : ''}`}>

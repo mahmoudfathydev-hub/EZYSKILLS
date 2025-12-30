@@ -1,0 +1,115 @@
+@import '../../../main.scss';
+
+.team-section {
+    padding: 7rem 0;
+    background-color: #f9fbfd;
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 5rem;
+
+        h4 {
+            color: var(--color-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: var(--color-navy);
+            font-weight: 800;
+
+            .highlight {
+                color: var(--color-secondary);
+            }
+        }
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+        }
+
+        .member-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+
+                .image-wrapper .social-overlay {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .image-wrapper {
+                position: relative;
+                height: 300px;
+                overflow: hidden;
+
+                img {
+                    width: 120%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .social-overlay {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 2rem;
+                    background: linear-gradient(transparent, rgba(0, 63, 125, 0.9));
+                    display: flex;
+                    justify-content: center;
+                    gap: 1.5rem;
+                    color: #fff;
+                    font-size: 1.5rem;
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: all 0.3s ease;
+
+                    svg {
+                        cursor: pointer;
+
+                        &:hover {
+                            color: var(--color-secondary);
+                        }
+                    }
+                }
+            }
+
+            .info {
+                padding: 1.5rem;
+                text-align: center;
+
+                h3 {
+                    font-size: 1.3rem;
+                    color: var(--color-navy);
+                    margin-bottom: 0.5rem;
+                    font-weight: 700;
+                }
+
+                p {
+                    color: var(--color-primary);
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}

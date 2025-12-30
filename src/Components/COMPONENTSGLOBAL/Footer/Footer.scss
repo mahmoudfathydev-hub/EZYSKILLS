@@ -138,8 +138,11 @@
 
                     li {
                         text-decoration: none;
-                        color: var(--color-light);
                         transition: all ease-in-out 0.3s;
+
+                        a {
+                            color: var(--color-light);
+                        }
 
                         &:hover {
                             color: var(--color-secondary);

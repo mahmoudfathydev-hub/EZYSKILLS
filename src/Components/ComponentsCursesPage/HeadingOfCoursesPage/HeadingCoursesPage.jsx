@@ -17,12 +17,12 @@ export default function HeadingCoursesPage({
         { id: 4, name: "Archived" },
     ];
 
-    // Local state for dropdown visibility
+    
     const [isSortOpen, setIsSortOpen] = useState(false);
 
     const handleSortClick = (value) => {
         setSortBy(value);
-        setIsSortOpen(false); // Close dropdown after selection
+        setIsSortOpen(false); 
     };
 
     return (
@@ -65,7 +65,7 @@ export default function HeadingCoursesPage({
                                         <path d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.394l149.996-150c5.858-5.858,5.858-15.356,0-21.214z" />
                                     </svg>
                                 </a>
-                                <div className="submenu" style={{ display: isSortOpen ? 'block' : 'none' }}> {/* controlled by hover but ensuring JS logic matches */}
+                                <div className="submenu" style={{ display: isSortOpen ? 'block' : 'none' }}> {}
                                     <div className="submenu-item">
                                         <a href="#" className="submenu-link" onClick={() => handleSortClick("Popular")}>Sort By: Popular</a>
                                     </div>

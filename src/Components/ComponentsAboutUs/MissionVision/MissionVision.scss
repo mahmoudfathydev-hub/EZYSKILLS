@@ -1,0 +1,65 @@
+@import '../../../main.scss';
+
+.mission-vision-section {
+    padding: 6rem 0;
+    background-color: #fcfcfc;
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+
+        .box {
+            padding: 4rem 3rem;
+            border-radius: 30px;
+            background: #fff;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03);
+            text-align: center;
+            border-top: 5px solid transparent;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+            }
+
+            &.mission {
+                border-top-color: var(--color-primary);
+
+                .icon {
+                    color: var(--color-primary);
+                }
+            }
+
+            &.vision {
+                border-top-color: var(--color-secondary);
+
+                .icon {
+                    color: var(--color-secondary);
+                }
+            }
+
+            .icon {
+                font-size: 3.5rem;
+                margin-bottom: 2rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+                color: var(--color-navy);
+                margin-bottom: 1.5rem;
+                font-weight: 800;
+            }
+
+            p {
+                color: var(--color-gray);
+                line-height: 1.8;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

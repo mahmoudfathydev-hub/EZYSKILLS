@@ -7,11 +7,19 @@ import { coursesData } from '../../data/CoursesData'
 
 export default function Course() {
     const { id } = useParams();
-    const course = coursesData.find(c => c.id === parseInt(id));
+    const courseId = parseInt(id);
 
-    if (!course) {
+    
+    
+    const baseIndex = (courseId - 1) % coursesData.length;
+    const baseCourse = coursesData[baseIndex];
+
+    if (!baseCourse) {
         return <div style={{ padding: "5rem", textAlign: "center" }}>Course not found</div>
     }
+
+    
+    const course = { ...baseCourse, id: courseId };
 
     return (
         <div>

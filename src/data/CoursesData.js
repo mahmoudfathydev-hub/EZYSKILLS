@@ -8,7 +8,7 @@ import vueImg from "../images/Vue.png";
 import reactImg from "../images/React.png";
 
 export const coursesData = [
-    // 1. Python
+    
     {
         id: 1,
         name: "Python",
@@ -164,7 +164,7 @@ export const coursesData = [
         ],
     },
 
-    // 2. Angular
+    
     {
         id: 2,
         name: "Angular",
@@ -313,7 +313,7 @@ export const coursesData = [
         ],
     },
 
-    // 3. AWS
+    
     {
         id: 3,
         name: "AWS",
@@ -447,7 +447,7 @@ export const coursesData = [
         ],
     },
 
-    // 4. Core UI
+    
     {
         id: 4,
         name: "Core UI",
@@ -580,7 +580,7 @@ export const coursesData = [
         ],
     },
 
-    // 5. Power BI
+    
     {
         id: 5,
         name: "Power BI",
@@ -715,7 +715,7 @@ export const coursesData = [
         ],
     },
 
-    // 6. Test
+    
     {
         id: 6,
         name: "Test",
@@ -847,7 +847,7 @@ export const coursesData = [
         ],
     },
 
-    // 7. Vue JS
+    
     {
         id: 7,
         name: "Vue JS",
@@ -982,7 +982,7 @@ export const coursesData = [
         ],
     },
 
-    // 8. React
+    
     {
         id: 8,
         name: "React",
