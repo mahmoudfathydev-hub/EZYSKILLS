@@ -136,8 +136,7 @@ The implementation focuses on translating high-quality design concepts into clea
 
 Clone the repository
 
-git clone https://github.com/your-username/ezyskills.git
-
+git clone https://github.com/mahmoudfathydev-hub/EZYSKILLS.git
 Install dependencies
 
 npm install
